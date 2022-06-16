@@ -49,3 +49,12 @@ footer a:visited {
   text-decoration: none;
   color: white
 }
+
+#title {
+  font-size: xx-large;
+  margin: 1rem auto;
+}
+
+nav {
+  margin: 0.5rem auto;
+}
