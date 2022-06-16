@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+header {
+  grid-area: header;
+  background-color: black;
+  color: white
+}
+
+main {
+  grid-area: main;
+  background-color: white;
+}
+
+footer {
+  grid-area: footer;
+  background-color: black;
+  color: white
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
