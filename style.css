@@ -35,7 +35,10 @@ footer {
   color: white
 }
 
-a,
-a:visited {
+header a,
+header a:visited,
+footer a,
+footer a:visited {
   text-decoration: none;
+  color: white
 }
