@@ -53,6 +53,7 @@ const genreList = []
 const genreDropdown = document.querySelector("#genre-select")
 const moviePosterUrls = []
 const main = document.querySelector("main")
+const posters = document.querySelector("#posters")
 
 genreDropdown.addEventListener("change", (e) =>
   fetchSearchResults(e.target.value)
@@ -70,7 +71,9 @@ function genreDropdownGen() {
 function moviePosterGen() {
   for (let i = 0; i < 6; i++) {
     let moviePoster = document.createElement("img")
+    let letters = "abcdef"
+    moviePoster.id = letters[i]
     moviePoster.src = `https://image.tmdb.org/t/p/w500${moviePosterUrls[i]}`
-    main.appendChild(moviePoster)
+    posters.appendChild(moviePoster)
   }
 }

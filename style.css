@@ -22,7 +22,6 @@ main {
   background-color: white;
   border: 2px solid black;
   margin: 3%;
-  /* display: flex; */
   align-items: center;
   justify-content: space-around;
   width: 94%;
@@ -55,4 +54,41 @@ footer a:visited {
 
 nav {
   margin: 1em auto;
+}
+
+img {
+  align-items: center;
+  justify-content: space-between;
+  width: 6em;
+}
+
+#posters {
+  display: grid;
+  grid-template-areas: 
+  "a b c"
+  "d e f";
+}
+
+#a {
+  grid-area: a;
+}
+
+#b {
+  grid-area: b;
+}
+
+#c {
+  grid-area: c;
+}
+
+#d {
+  grid-area: d;
+}
+
+#e {
+  grid-area: e;
+}
+
+#f {
+  grid-area: f;
 }
