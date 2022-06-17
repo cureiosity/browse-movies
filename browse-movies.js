@@ -79,11 +79,16 @@ function moviePosterGen() {
   }
   const posters = document.querySelectorAll(".posters")
   posters.forEach((poster) => {
-    console.log(poster)
-    poster.addEventListener("click", () => console.log("clicked!"))
+    poster.addEventListener("click", modalGen)
   })
 }
 
+function modalGen() {
+  let modal = document.createElement("div")
+  modal.classList.add("modal")
+  modal.innerText = "test"
+  main.appendChild(modal)
+}
 // click image, display stuff
 // z - index
 // position it

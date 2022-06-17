@@ -88,3 +88,11 @@ img {
 #f {
   grid-area: f;
 }
+
+.modal {
+  z-index: 1;
+  background-color: red;
+  color: white;
+  height: 50px;
+  width: 100px;
+}
