@@ -37,12 +37,20 @@ function fetchSearchResults(genre) {
   fetch(apiSearchWhole)
     .then((result) => result.json())
     .then((result) => {
-      console.log(result)
-      console.log(apiSearchWhole)
-      result.results.forEach((element) => {
+      for (i = 0; i < 6; i++) {
+        const element = result.results[i]
+        console.log(element)
         moviePosterUrls.push(element.poster_path)
-      })
-      moviePosterGen()
+        const newMovie = new Movie(
+          element.poster_path,
+          element.title,
+          element.release_date,
+          element.overview
+        )
+        movies.push(newMovie)
+      }
+      console.log(movies)
+      movieDataGen()
     })
     .catch((err) => {
       console.error("Error --- ", err)
@@ -51,9 +59,19 @@ function fetchSearchResults(genre) {
 
 const genreList = []
 const genreDropdown = document.querySelector("#genre-select")
+const movies = []
 const moviePosterUrls = []
 const main = document.querySelector("main")
 const postersContainer = document.querySelector("#posters-container")
+
+class Movie {
+  constructor(moviePosterUrl, name, releaseDate, description) {
+    this.moviePosterUrl = moviePosterUrl
+    this.name = name
+    this.releaseDate = releaseDate
+    this.description = description
+  }
+}
 
 genreDropdown.addEventListener("change", (e) =>
   fetchSearchResults(e.target.value)
@@ -68,7 +86,7 @@ function genreDropdownGen() {
   })
 }
 
-function moviePosterGen() {
+function movieDataGen() {
   for (let i = 0; i < 6; i++) {
     let moviePoster = document.createElement("img")
     let letters = "abcdef"
@@ -86,7 +104,10 @@ function moviePosterGen() {
 function modalGen() {
   let modal = document.createElement("div")
   modal.classList.add("modal")
-  modal.innerText = "test"
+  modal.innerHTML = `
+    test
+    `
+  // <h2>${}</h2>
   main.appendChild(modal)
 }
 // click image, display stuff
