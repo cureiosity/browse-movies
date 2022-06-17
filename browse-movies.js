@@ -19,7 +19,7 @@ function fetchGenres() {
     .then((result) => {
       result.genres.forEach((element) => {
         genreList.push(element)
-        console.log(element.name, element.id)
+        // console.log(element.name, element.id)
       })
       genreDropdownGen()
     })
@@ -53,7 +53,7 @@ const genreList = []
 const genreDropdown = document.querySelector("#genre-select")
 const moviePosterUrls = []
 const main = document.querySelector("main")
-const posters = document.querySelector("#posters")
+const postersContainer = document.querySelector("#posters-container")
 
 genreDropdown.addEventListener("change", (e) =>
   fetchSearchResults(e.target.value)
@@ -72,8 +72,19 @@ function moviePosterGen() {
   for (let i = 0; i < 6; i++) {
     let moviePoster = document.createElement("img")
     let letters = "abcdef"
+    moviePoster.classList.add("posters")
     moviePoster.id = letters[i]
     moviePoster.src = `https://image.tmdb.org/t/p/w500${moviePosterUrls[i]}`
-    posters.appendChild(moviePoster)
+    postersContainer.appendChild(moviePoster)
   }
+  const posters = document.querySelectorAll(".posters")
+  posters.forEach((poster) => {
+    console.log(poster)
+    poster.addEventListener("click", () => console.log("clicked!"))
+  })
 }
+
+// click image, display stuff
+// z - index
+// position it
+// how to close modal

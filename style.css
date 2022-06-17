@@ -43,10 +43,6 @@ footer a:visited {
   color: white;
 }
 
-/* a:hover {
-  font-size: 1.25em;
-} */
-
 #title {
   font-size: xx-large;
   margin: 1em auto;
@@ -62,7 +58,7 @@ img {
   width: 6em;
 }
 
-#posters {
+#posters-container {
   display: grid;
   grid-template-areas: 
   "a b c"
