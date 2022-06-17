@@ -89,6 +89,10 @@ img {
   grid-area: f;
 }
 
+.posters {
+  cursor: pointer;
+}
+
 .modal {
   z-index: 1;
   background-color: red;
