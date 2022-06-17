@@ -105,12 +105,9 @@ function modalGen() {
   let modal = document.createElement("div")
   modal.classList.add("modal")
   modal.innerHTML = `
-    test
+  <h4>${movies[0].name}</h4><br>
+  <h6>${movies[0].releaseDate}</h6><br>
+  <h6>${movies[0].description}</h6>
     `
-  // <h2>${}</h2>
   main.appendChild(modal)
 }
-// click image, display stuff
-// z - index
-// position it
-// how to close modal
