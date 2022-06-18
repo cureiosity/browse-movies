@@ -102,13 +102,16 @@ function movieDataGen() {
 }
 
 function modalGen() {
-  let modal = document.createElement("div")
-  modal.classList.add("modal")
-  modal.innerHTML = `
-  <img src="https://image.tmdb.org/t/p/w500${movies[0].moviePosterUrl}">
-  <h4>${movies[0].name}</h4><br>
-  <h6>${movies[0].releaseDate}</h6><br>
-  <h6>${movies[0].description}</h6>
+  let modalBackground = document.createElement("div")
+  modalBackground.classList.add("modal-bg")
+  modalBackground.innerHTML = `
+  <div class="modal">
+  <span class="modal-close">X</span>
+    <img src="https://image.tmdb.org/t/p/w500${movies[0].moviePosterUrl}">
+    <h4>${movies[0].name}</h4><br>
+    <h6>${movies[0].releaseDate}</h6><br>
+    <h6>${movies[0].description}</h6>
+  </div>
     `
-  main.appendChild(modal)
+  main.appendChild(modalBackground)
 }
