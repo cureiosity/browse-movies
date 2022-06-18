@@ -97,23 +97,25 @@ img {
   z-index: 1;
   background-color: rgb(235,235,235);
   color: black;
-  border: 1px black;
-  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+  border: 1px solid black;
+
+  /* make responsive */
   height: 250px;
+
+  /* make responsive */
   width: 250px;
+
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+
+  /* make vertically centered within the page or within main */
+  top: 35vh;
   bottom: 0;
+  
+  left: 1em;
+  right: 1em;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  /* background: var(--black); */
-  cursor: pointer;
-  /* visibility: hidden; */
-  /* opacity: 0; */
-  transition: all 0.35s ease-in;
+  padding: 1em;
 }

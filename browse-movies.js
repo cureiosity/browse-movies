@@ -39,7 +39,7 @@ function fetchSearchResults(genre) {
     .then((result) => {
       for (i = 0; i < 6; i++) {
         const element = result.results[i]
-        console.log(element)
+        // console.log(element)
         moviePosterUrls.push(element.poster_path)
         const newMovie = new Movie(
           element.poster_path,
@@ -49,7 +49,7 @@ function fetchSearchResults(genre) {
         )
         movies.push(newMovie)
       }
-      console.log(movies)
+      // console.log(movies)
       movieDataGen()
     })
     .catch((err) => {
@@ -105,6 +105,7 @@ function modalGen() {
   let modal = document.createElement("div")
   modal.classList.add("modal")
   modal.innerHTML = `
+  <img src="https://image.tmdb.org/t/p/w500${movies[0].moviePosterUrl}">
   <h4>${movies[0].name}</h4><br>
   <h6>${movies[0].releaseDate}</h6><br>
   <h6>${movies[0].description}</h6>
