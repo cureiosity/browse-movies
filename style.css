@@ -27,6 +27,7 @@ main {
   width: 94%;
   flex-grow: 1;
   padding: 1em;
+  /* padding-bottom: -1em; */
 }
 
 footer {
@@ -91,6 +92,7 @@ img {
 
 .posters {
   cursor: pointer;
+  margin: 1.5vh auto;
 }
 
 .modal-bg {
@@ -129,4 +131,8 @@ img {
   color: white;
   padding: 5px;
   cursor: pointer;
+}
+
+#dropdown {
+  margin-bottom: 4vh;
 }

@@ -114,4 +114,8 @@ function modalGen() {
   </div>
     `
   main.appendChild(modalBackground)
+  const xButton = document.querySelector(".modal-close")
+  xButton.addEventListener("click", function () {
+    modalBackground.remove()
+  })
 }
