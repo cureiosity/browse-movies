@@ -96,21 +96,23 @@ function movieDataGen() {
     postersContainer.appendChild(moviePoster)
   }
   const posters = document.querySelectorAll(".posters")
-  posters.forEach((poster) => {
-    poster.addEventListener("click", modalGen)
+  posters.forEach((poster, index) => {
+    poster.addEventListener("click", () => {
+      modalGen(index)
+    })
   })
 }
 
-function modalGen() {
+function modalGen(index) {
   let modalBackground = document.createElement("div")
   modalBackground.classList.add("modal-bg")
   modalBackground.innerHTML = `
   <div class="modal">
   <span class="modal-close">X</span>
-    <img src="https://image.tmdb.org/t/p/w500${movies[0].moviePosterUrl}">
-    <h4>${movies[0].name}</h4><br>
-    <h6>${movies[0].releaseDate}</h6><br>
-    <h6>${movies[0].description}</h6>
+    <img src="https://image.tmdb.org/t/p/w500${movies[index].moviePosterUrl}">
+    <h4>${movies[index].name}</h4><br>
+    <h6>${movies[index].releaseDate}</h6><br>
+    <h6>${movies[index].description}</h6>
   </div>
     `
   main.appendChild(modalBackground)
